@@ -1,0 +1,409 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: gainsboro;
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: gainsboro;
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: #DF2C62;
+    color: white;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, .1);
+    padding: 0px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+header .logo{
+    font-weight: bolder;
+    color: white;
+}
+header .logo img{
+    height: 60px;
+    margin: 10px 0px;
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float: left;
+}
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    display: block;
+}
+header .navbar ul li a:hover{
+    background-color: white;
+    color: #b30036;
+    border-radius: 10px;
+}
+
+
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background-color: #DF2C62;
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0, 0, 0, .1);
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+
+
+#menu_bar{
+    display: none;
+}
+
+
+header label{
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+    display: none;
+}
+
+
+/* just testig */
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar img{
+    height: 30px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+
+
+
+
+
+@media (max-width: 800px){
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #DF2C62;
+        color: white;
+        border-top: 1px solid black;
+        display: none;
+        padding-bottom: 20px;
+    }
+    header .navbar ul li{
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li{
+        background-color: #DF2C62;
+    }
+    #menu_bar:checked ~ .navbar{
+        display: initial;
+    }
+    .navbar img{
+        margin-left: 20px;
+        height: 40px;
+    }
+}
+
+
+/* working on the bucket */
+
+
+.sla{
+    position: relative;
+}
+.bucketcount{
+    position: relative;
+    z-index: -1;
+}
+.smallnumber{
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    height: 15px;
+    width: 10px;
+    color: white;
+    border-radius: 10px;
+    z-index: 10 ;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.product{
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    top: 35px;
+    right: 0;
+    display: none;
+    transition: 1s;
+    overflow-y: auto;
+}
+.sla:focus-within,
+.sla:hover .product{
+    display: block;
+    transition: 1s;
+}
+.product .content{
+    width: 90%;
+    margin: 20px auto;
+    background-color: white;
+    color: black;
+}
+.sla .product .content .choosed{
+    display: flex;
+    justify-content: space-between;   
+    align-items: center; 
+}
+.product .choosed .shirt{
+    width: 30%;
+    height: auto;
+    margin: 0;
+}
+.product .choosed .info{
+    width: 60%;
+    padding: 15px;
+}
+.product .choosed .delete{
+    width: 10%;
+}
+
+
+
+.product .content .total{
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.product .content .scard{
+    width: 100%;
+    padding: 15px;
+    background-color: rgb(0, 169, 0);
+    color: white;
+    letter-spacing: 2px;
+    margin: 10px 0px;
+    border: none;
+    cursor: pointer;
+}
+.product .content .checkout{
+    width: 100%;
+    padding: 15px;
+    background-color: #b30036;
+    color: white;
+    letter-spacing: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+
+@media (max-width: 800px){
+    .sla .product{
+        display: none;
+    }
+    .sla .bucketcount{
+        z-index: 1;
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+    .sla .smallnumber{
+        display: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* working on the main  */
+main{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 200px;
+    flex-wrap: wrap;
+}
+main .box{
+    width: 25%;
+    height: auto;
+    transform: translatey(100px);
+    transition: 0.5s ease-in;
+    opacity: 0;
+}
+main .box.active{
+    transform: translateY(0%);
+    opacity: 1;
+}
+main .box img{
+    height: auto;
+    width: 100%;
+}
+@media screen and (max-width: 800px){
+    main{
+        flex-direction: column;
+    }
+    main .box{
+        width: 90%;
+        margin: 20px;
+    }
+}
+
+
+
+
+/* working on the clothing page on the clothing offers */
+
+.clothes{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    flex-wrap: wrap;
+}
+.clothes .offer{
+    width:22%;
+    height: auto;
+    margin: 20px;
+    position: relative;
+    transform: translateY(20%);
+    opacity: 0;
+    transition: 1s;
+}
+.clothes .offer.show{
+    opacity: 1;
+    transform: translateY(0%);
+}
+.clothes .offer a{
+    text-decoration: none;
+    color: black;
+}
+.clothes .offer .name{
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 2px;
+    padding: 10px;
+}
+.clothes .offer img{
+    width: 100%;
+}
+.clothes .offer button{
+    position: absolute;
+    bottom: 18%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 30px;
+    background-color: #DF2C62;
+    border: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+    opacity: 0;
+    cursor: pointer;
+}
+.clothes .offer button:hover{
+    background-color: white;
+    color: #DF2C62;
+}
+.offer:hover button{
+    opacity: 1;
+    bottom: 30%;
+
+}
+
+
+@media screen and (max-width: 800px){
+    .clothes{
+        flex-direction: column;
+    }
+    .clothes .offer{
+        width: 90%;
+    }
+    .clothes .offer button{
+        opacity: 1;
+    }
+}
+
+.hello{
+    position: absolute;
+    top: 17vh;
+    left: 50%;
+    font-size: 25px;
+    transform: translateX(-50%);
+    text-align: center;
+}

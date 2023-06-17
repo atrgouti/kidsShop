@@ -1,0 +1,193 @@
+.card{
+    width: 90%;
+    margin: 0px auto;
+    /* background-color: beige; */
+    height: 100vh;
+    margin-top: 12vh;
+}
+.card h1{
+    text-align: center;
+    padding: 40px 0px;
+}
+.card .totalproducts{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+.card .productsshow{
+    width: 60%;
+    height: 100px;
+}
+.card .checkoutproducts{
+    width: 40%;
+    background-color: #DF2C62;
+    border-radius: 20px;
+}
+.card .checkoutproducts .info{
+    width: 90%;
+    margin: 0px auto;
+}
+.card .checkoutproducts .info .curent{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 30px;
+}
+.card .checkoutproducts .info .curent2{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 5px;
+}
+.card .checkoutproducts .info .line{
+    height: 1px;
+    width: 100%;
+    background-color: white;
+    margin-top: 20px;
+}
+.card .checkoutproducts .info .curent3{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
+.card .checkoutproducts .info button{
+    width: 100%;
+    padding: 10px;
+    background-color: white;
+    color: #DF2C62;
+    border-radius: 10px;
+    border: none;
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    
+}
+.card .checkoutproducts .info .minumum{
+    margin-top: 10px;
+    color: white;
+    text-align: center;
+    font-size: 14px;
+}
+.card .checkoutproducts .info .getways{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.card .checkoutproducts .info .getways img{
+    height: 25px;
+}
+.card .checkoutproducts .info .garanti{
+    margin: 10px auto;
+}
+.card .checkoutproducts .info .garanti p{
+    text-align: center;
+    color: white;
+}
+
+
+
+/* working on the left show */
+.card .totalproducts .leftshow{
+    height: 200px;
+    width: 100%;
+    background-color: #DF2C62;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+.card .totalproducts .leftshow .content{
+    width: 90%;
+    display: flex;
+    height: 100%;
+    margin: 0px auto;
+    gap: 30px
+    ;
+}
+.card .totalproducts .leftshow .content .photo{
+     width: 20%;
+     height: 100%;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.card .totalproducts .leftshow .content .photo img{
+    border-radius: 10px;
+    width: 85%;
+    min-width: 70px;
+}
+.card .totalproducts .leftshow .content .operations{
+    color: white;
+    width: 80%;
+    height: 100%;
+}
+.card .totalproducts .leftshow .content .operations .name{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 40px;
+}
+.card .totalproducts .leftshow .content .operations .name .shirt{
+    font-size: 20px;
+    font-weight: bold;
+}
+.card .totalproducts .leftshow .content .operations .color{
+    padding-top: 5px;
+}
+.card .totalproducts .leftshow .content .operations .contity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card .totalproducts .leftshow .content .operations .contity .prix{
+    padding-top: 20px;
+}
+.card .totalproducts .leftshow .content .operations .contity .increase{
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+}
+.card .totalproducts .leftshow .content .operations .contity .increase p{
+    padding: 10px;
+}
+.card .totalproducts .leftshow .content .operations .contity .increase button{
+    padding: 10px 14px;
+    cursor: pointer;
+    border: none;
+    background-color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 0.8;
+}
+.card .totalproducts .leftshow .content .operations .contity .increase button:hover{
+    opacity: 1;
+}
+
+
+
+
+@media screen and (max-width: 800px){
+    .totalproducts{
+        padding-bottom: 30px;
+        flex-direction: column;
+    }
+    .productsshow{
+        width: 100%;
+    }
+    .card .productsshow{
+        width: 100%;
+    }
+    .card .checkoutproducts{
+        width: 100%;
+    }
+    .card .productsshow{
+        height: auto;
+    }
+}
+
+.operations .name img{
+    height: 30px;
+    cursor: pointer;
+}
